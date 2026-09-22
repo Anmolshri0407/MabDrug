@@ -1,6 +1,4 @@
 
-import { useEffect, useState } from "react";
-
 import {
   Pill,
   Tablets,
@@ -10,69 +8,42 @@ import {
 
 
 // =========================================================
-// ICON MAPPING
+// STATIC PRODUCT DATA
 // =========================================================
 
-const iconMap = {
-  Tablets: Pill,
-  Capsules: Tablets,
-  Syrups: Droplets,
-  "Other Healthcare Products": Stethoscope,
-};
+const products = [
+  {
+    id: 1,
+    title: "Tablets",
+    description:
+      "High-quality tablet formulations developed with a focus on consistency, safety and reliable performance.",
+    icon: Pill,
+  },
+  {
+    id: 2,
+    title: "Capsules",
+    description:
+      "Carefully developed capsule formulations designed to meet quality standards and patient needs.",
+    icon: Tablets,
+  },
+  {
+    id: 3,
+    title: "Syrups",
+    description:
+      "Reliable liquid formulations designed with quality, effectiveness and ease of use in mind.",
+    icon: Droplets,
+  },
+  {
+    id: 4,
+    title: "Other Healthcare Products",
+    description:
+      "A growing range of healthcare solutions focused on quality, reliability and responsible innovation.",
+    icon: Stethoscope,
+  },
+];
 
 
 function ProductPreview() {
-
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-
-  // =========================================================
-  // FETCH PRODUCT CATEGORIES FROM DJANGO API
-  // =========================================================
-
-  useEffect(() => {
-
-    const fetchProducts = async () => {
-
-      try {
-
-        setLoading(true);
-        setError("");
-
-        const response = await fetch(
-          "https://mabdrug-production.up.railway.app/api/categories/"
-        );
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch product categories.");
-        }
-
-        const data = await response.json();
-
-        setCategories(data);
-
-      } catch (error) {
-
-        console.error("Product Category API Error:", error);
-
-        setError(
-          "Unable to load products. Please try again later."
-        );
-
-      } finally {
-
-        setLoading(false);
-
-      }
-    };
-
-
-    fetchProducts();
-
-  }, []);
-
 
   return (
     <section
@@ -117,156 +88,107 @@ function ProductPreview() {
 
 
         {/* ================================================== */}
-        {/* LOADING */}
-        {/* ================================================== */}
-
-        {loading && (
-          <div className="py-10 text-sm text-slate-500">
-            Loading products...
-          </div>
-        )}
-
-
-        {/* ================================================== */}
-        {/* ERROR */}
-        {/* ================================================== */}
-
-        {!loading && error && (
-          <div className="rounded-xl border border-red-200 bg-red-50 px-6 py-4">
-
-            <p className="text-sm text-red-600">
-              {error}
-            </p>
-
-          </div>
-        )}
-
-
-        {/* ================================================== */}
         {/* PRODUCT CATEGORY CARDS */}
         {/* ================================================== */}
 
-        {!loading && !error && categories.length > 0 && (
+        <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2">
 
-          <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2">
+          {products.map((product) => {
 
-            {categories.map((category) => {
+            const Icon = product.icon;
 
-              const Icon =
-                iconMap[category.title] || Pill;
+            return (
 
+              <div
+                key={product.id}
+                className="
+                  group
+                  flex
+                  min-h-[300px]
+                  flex-col
+                  items-center
+                  justify-center
+                  rounded-3xl
+                  border
+                  border-slate-400
+                  bg-white
+                  p-9
+                  transition-all
+                  duration-300
+                  hover:-translate-y-2
+                  hover:border-orange-200
+                  hover:shadow-xl
+                "
+              >
 
-              return (
+                {/* ================================================== */}
+                {/* ICON */}
+                {/* ================================================== */}
 
                 <div
-                  key={category.id}
                   className="
-                    group
                     flex
-                    min-h-[300px]
-                    flex-col
+                    h-14
+                    w-14
                     items-center
                     justify-center
-                    rounded-3xl
-                    border
-                    border-slate-400
-                    bg-white
-                    p-9
+                    rounded-2xl
+                    bg-orange-50
+                    text-[#F04424]
                     transition-all
                     duration-300
-                    hover:-translate-y-2
-                    hover:border-orange-200
-                    hover:shadow-xl
+                    group-hover:bg-[#F04424]
+                    group-hover:text-white
                   "
                 >
 
-                  {/* ================================================== */}
-                  {/* ICON */}
-                  {/* ================================================== */}
-
-                  <div
-                    className="
-                      flex
-                      h-14
-                      w-14
-                      items-center
-                      justify-center
-                      rounded-2xl
-                      bg-orange-50
-                      text-[#F04424]
-                      transition-all
-                      duration-300
-                      group-hover:bg-[#F04424]
-                      group-hover:text-white
-                    "
-                  >
-
-                    <Icon
-                      size={28}
-                      strokeWidth={1.7}
-                    />
-
-                  </div>
-
-
-                  {/* ================================================== */}
-                  {/* TITLE */}
-                  {/* ================================================== */}
-
-                  <h3
-                    className="
-                      mt-7
-                      text-2xl
-                      font-semibold
-                      text-[#333333]
-                    "
-                  >
-                    {category.title}
-                  </h3>
-
-
-                  {/* ================================================== */}
-                  {/* DESCRIPTION */}
-                  {/* ================================================== */}
-
-                  <p
-                    className="
-                      mt-4
-                      max-w-md
-                      text-sm
-                      leading-7
-                      text-slate-600
-                    "
-                  >
-                    {category.description}
-                  </p>
+                  <Icon
+                    size={28}
+                    strokeWidth={1.7}
+                  />
 
                 </div>
 
-              );
 
-            })}
+                {/* ================================================== */}
+                {/* TITLE */}
+                {/* ================================================== */}
 
-          </div>
+                <h3
+                  className="
+                    mt-7
+                    text-2xl
+                    font-semibold
+                    text-[#333333]
+                  "
+                >
+                  {product.title}
+                </h3>
 
-        )}
 
+                {/* ================================================== */}
+                {/* DESCRIPTION */}
+                {/* ================================================== */}
 
-        {/* ================================================== */}
-        {/* NO PRODUCTS */}
-        {/* ================================================== */}
+                <p
+                  className="
+                    mt-4
+                    max-w-md
+                    text-sm
+                    leading-7
+                    text-slate-600
+                  "
+                >
+                  {product.description}
+                </p>
 
-        {!loading && !error && categories.length === 0 && (
+              </div>
 
-          <div className="py-10">
+            );
 
-            <p className="text-sm text-slate-500">
-              No products available at the moment.
-            </p>
+          })}
 
-          </div>
-
-        )}
+        </div>
 
       </div>
 
@@ -274,5 +196,5 @@ function ProductPreview() {
   );
 }
 
-export default ProductPreview;
 
+export default ProductPreview;
