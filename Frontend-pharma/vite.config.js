@@ -9,7 +9,7 @@ export default defineConfig({
   ],
   preview: {
     allowedHosts: [
-      "miraculous-light-production-e025.up.railway.app",
+      "mabdrugmiraculous-light-production-e025.up.railway.app",
       "mabdrug.com",
     ],
   },
