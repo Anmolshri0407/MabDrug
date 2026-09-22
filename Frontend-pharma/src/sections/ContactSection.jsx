@@ -101,7 +101,7 @@ function ContactEnquiry() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/enquiries/",
+        "https://mabdrug-production.up.railway.app/api/enquiries/",
         {
           method: "POST",
 

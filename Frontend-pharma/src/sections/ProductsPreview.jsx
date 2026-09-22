@@ -42,7 +42,7 @@ function ProductPreview() {
         setError("");
 
         const response = await fetch(
-          "http://127.0.0.1:8000/api/categories/"
+          "https://mabdrug-production.up.railway.app/api/categories/"
         );
 
         if (!response.ok) {
