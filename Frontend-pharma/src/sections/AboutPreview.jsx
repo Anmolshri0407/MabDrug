@@ -14,12 +14,12 @@ function AboutPreview() {
         <div className="w-full text-center">
 
           {/* Section Label */}
-          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#F04424] sm:text-sm sm:tracking-[0.2em]">
+          <p className="text-[11px]  font-semibold uppercase tracking-[0.15em] text-[#F04424] sm:text-sm sm:tracking-[0.2em]">
             About Mabdrug
           </p>
 
           {/* Main Heading */}
-          <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#333333] sm:mt-6 sm:text-5xl">
+          <h2 className="mt-5 text-3xl  font-bold leading-tight tracking-tight text-[#333333] sm:mt-6 sm:text-5xl">
             Building Trust Through
             <br />
             <span className="text-[#F04424]">
@@ -31,7 +31,7 @@ function AboutPreview() {
 
         {/* ================= MAIN CONTENT ================= */}
 
-        <div className="grid w-full items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid w-full  items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* ================= LEFT VISUAL ================= */}
 
@@ -68,7 +68,7 @@ function AboutPreview() {
 
           {/* ================= RIGHT CONTENT ================= */}
 
-          <div className="w-full  px-4 sm:px-2 lg:px-0">
+          <div className="w-full   px-4 sm:px-2 lg:px-0">
 
               {/* Main Paragraph */}
               <p className="max-w-[330px] translate-x-4 text-left text-base leading-7 text-slate-600 sm:max-w-xl sm:text-lg sm:leading-8">

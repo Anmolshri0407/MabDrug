@@ -23,9 +23,6 @@ function App() {
         {/* ================= HERO ================= */}
         <Hero />
 
-        {/* ================= ABOUT ================= */}
-        <AboutPreview />
-
         {/* ================= CORE VALUES ================= */}
         <CoreValues />
 
@@ -34,6 +31,9 @@ function App() {
 
         {/* ================= QUALITY ================= */}
         <QualityCompliance />
+
+        {/* ================= ABOUT ================= */}
+        <AboutPreview />
 
         {/* ================= CONTACT / ENQUIRY ================= */}
         <ContactEnquiry />

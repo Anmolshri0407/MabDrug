@@ -142,7 +142,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import heroMolecule from "../assets/hero/hero-molecule.png";
-import heroBackground from "../assets/images/background1.jpg";
+import heroBackground from "../assets/images/background2.jpg";
 
 function Hero() {
   return (
@@ -159,11 +159,11 @@ function Hero() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-white/75 sm:bg-white/65 lg:bg-white/55" />
+        <div className="absolute  bg-white/75 sm:bg-white/65 lg:bg-white/55" />
       </div>
 
       {/* Background Decoration */}
-      <div className="pointer-events-none absolute -right-24 top-24 z-[1] h-64 w-64 rounded-full bg-orange-100/40 blur-3xl sm:-right-32 sm:h-80 sm:w-80 lg:top-20 lg:h-96 lg:w-96" />
+      <div className="pointer-events-none absolute -right-24 top-24 z-[2] h-64 w-64 rounded-full bg-orange-100/40 blur-3xl sm:-right-32 sm:h-80 sm:w-80 lg:top-20 lg:h-96 lg:w-96" />
 
       <div className="pointer-events-none absolute -bottom-10 -left-24 z-[1] h-64 w-64 rounded-full bg-slate-200/40 blur-3xl sm:-left-32 sm:h-72 sm:w-72 lg:h-80 lg:w-80" />
 
@@ -226,7 +226,8 @@ function Hero() {
                 max-w-[330px]
                 text-sm
                 leading-6
-                text-slate-600
+                text-black
+                font-semibold
                 sm:max-w-xl
                 sm:text-base
                 sm:leading-8
@@ -279,7 +280,7 @@ function Hero() {
         </div>
 
         {/* Desktop Molecule */}
-        <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 hidden -translate-y-1/2 translate-x-[115px] lg:block">
+        <div className="pointer-events-none absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 translate-x-[115px] lg:block">
           <img
             src={heroMolecule}
             alt="Scientific molecular illustration"
