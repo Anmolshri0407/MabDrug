@@ -166,7 +166,7 @@ function Footer() {
               Contact Us
             </h3>
 
-            <div className="mt-5 w-full flex gap-7 max-w-sm space-y-5 sm:mt-6">
+            <div className="mt-5   w-full flex gap-6  max-w-sm space-y-5 sm:mt-6">
 
               {/* Email */}
 
