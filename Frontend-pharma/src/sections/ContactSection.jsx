@@ -317,7 +317,7 @@ function ContactEnquiry() {
               items-center
               justify-center
               rounded-3xl
-              bg-[#333333]
+              bg-[#000000]
               px-6
               py-14
               text-center

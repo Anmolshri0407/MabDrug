@@ -7,11 +7,11 @@ import {
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#333333] text-white">
+    <footer className="w-full bg-[#000000] text-white">
 
       {/* ================= MAIN FOOTER ================= */}
 
-      <div className="mx-auto w-full max-w-7xl px-6 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-14 pb-24 sm:px-8 sm:pt-16 sm:pb-28 lg:px-10 lg:pt-20 lg:pb-32">
 
         <div
           className="
@@ -166,90 +166,79 @@ function Footer() {
               Contact Us
             </h3>
 
-            <div className="mt-5 w-full max-w-sm space-y-5 sm:mt-6">
+            <div className="mt-5 w-full flex gap-7 max-w-sm space-y-5 sm:mt-6">
 
               {/* Email */}
 
-              <div className="flex items-start gap-3">
-
-                <Mail
-                  size={18}
-                  className="mt-0.5 shrink-0 text-orange-400"
-                />
-
-                <span className="break-all text-sm leading-6 text-slate-300">
-                  mabdrugpharm@gmail.com
-                </span>
-
-              </div>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=mabdrugpharm@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email Mabdrug"
+                className="
+                  flex h-17 w-17 items-center justify-center
+                  rounded-4xl bg-white/10 text-orange-400
+                  transition-all duration-300
+                  hover:bg-[#F04424] hover:text-white
+                "
+              >
+                <Mail size={30} strokeWidth={2.8} /> </a>
 
               {/* Phone */}
 
-              <div className="flex items-start gap-3">
-
-                <Phone
-                  size={18}
-                  className="mt-0.5 shrink-0 text-orange-400"
-                />
-
-                <span className="text-sm leading-6 text-slate-300">
-                  +91 63071 40766
-                </span>
-
-              </div>
+              <a
+                  href="tel:+916307140766"
+                  aria-label="Call Mabdrug"
+                  className="
+                    flex h-17 w-17 items-center justify-center
+                    rounded-4xl bg-white/10 text-orange-400
+                    transition-all duration-300
+                    hover:bg-[#F04424] hover:text-white
+                  "
+                > <Phone size={30} strokeWidth={2.8} /> </a>
               {/* Instagram */}
 
-              <div className="flex items-start gap-3">
+              {/* Instagram */} 
+              <a href="https://www.instagram.com/mabdrug_/" 
+              target="_blank" rel="noopener noreferrer" aria-label="Mabdrug Instagram" 
+              className=" flex h-17 w-17 items-center justify-center rounded-4xl
+               bg-white/10 text-orange-400 transition-all duration-300 
+               hover:bg-[#F04424] hover:text-white " > 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" 
+               strokeLinejoin="round" className="h-[30px] w-[30px]" > 
+               <rect x="2" y="2" width="20" height="20" rx="5" /> 
+               <circle cx="12" cy="12" r="4" /> 
+               <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" /> 
+               </svg> 
+               </a>
 
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="mt-0.5 h-[18px] w-[18px] shrink-0 text-orange-400"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-                </svg>
 
-                <a
-                  href="https://www.instagram.com/mabdrug_/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm leading-6 text-slate-300 transition hover:text-white"
-                >
-                  @mabdrug_
-                </a>
-
-              </div>
               {/* Location */}
 
-              <div className="flex items-start gap-3">
-
-                <MapPin
-                  size={18}
-                  className="mt-0.5 shrink-0 text-orange-400"
-                />
-
-                <span className="text-sm leading-6 text-slate-300">
-                  India
-                </span>
-
-              </div>
-
+             <a
+                href="https://www.google.com/maps/search/?api=1&query=India"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mabdrug Location"
+                className="
+                  flex h-17 w-17 items-center justify-center
+                  rounded-4xl bg-white/10 text-orange-400
+                  transition-all duration-300
+                  hover:bg-[#F04424] hover:text-white
+                "
+              >
+                <MapPin size={30} strokeWidth={2.8} />
+              </a>
             </div>
           </div>
 
         </div>
       </div>
-
+    <div className="h-5"></div>
       {/* ================= BOTTOM BAR ================= */}
 
-      <div className="border-t border-white/10">
+      <div className="border-t pt-10 border-white/10">
 
         <div
           className="
@@ -267,7 +256,7 @@ function Footer() {
             lg:px-10
           "
         >
-
+          
           {/* Copyright */}
 
           <p className="text-center text-xs text-slate-400 lg:text-left">
@@ -293,7 +282,7 @@ function Footer() {
             </a>
 
           </div>
-
+          <div className="h-2"></div>
         </div>
 
       </div>
