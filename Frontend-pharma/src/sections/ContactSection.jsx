@@ -189,16 +189,7 @@ function ContactEnquiry() {
   return (
     <section
       id="contact"
-      className="
-        w-full
-        bg-white
-        px-5
-        py-20
-        sm:px-8
-        sm:py-24
-        lg:px-8
-        lg:py-32
-      "
+      className="bg-white w-full flex justify-center text-center px-6 py-32 lg:px-8"
     >
 
       {/* ================================================== */}
@@ -491,6 +482,45 @@ function ContactEnquiry() {
 
               </div>
 
+              {/* INSTAGRAM */}
+              <div className="flex w-full items-center gap-4 py-4 text-left">
+                <div
+                  className="
+                    flex h-11 w-11 shrink-0 items-center justify-center
+                    rounded-xl bg-white/10 text-orange-400
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-5 w-5"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                  </svg>
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400">
+                    Instagram
+                  </p>
+
+                  <a
+                    href="https://www.instagram.com/mabdrug_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-sm font-medium transition-colors hover:text-orange-400"
+                  >
+                    @mabdrug_
+                  </a>
+                </div>
+              </div>
 
               {/* LOCATION */}
 
@@ -584,6 +614,7 @@ function ContactEnquiry() {
                 max-w-[330px]
                 flex-col
                 space-y-5
+                text-left
                 sm:max-w-md
                 sm:space-y-6
               "
@@ -833,53 +864,50 @@ function ContactEnquiry() {
               {/* ================================================== */}
 
               <button
-                type="submit"
-                disabled={loading}
-                className="
-                  group
-                  mt-2
-                  inline-flex
-                  min-h-[50px]
-                  w-full
-                  items-center
-                  justify-center
-                  gap-3
-                  rounded-full
-                  bg-[#333333]
-                  px-6
-                  py-3.5
-                  text-sm
-                  font-semibold
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:bg-[#F04424]
-                  disabled:cursor-not-allowed
-                  disabled:opacity-60
-                  sm:w-auto
-                  sm:self-center
-                  sm:px-8
-                "
-              >
+                  type="submit"
+                  disabled={loading}
+                  className="
+                    group
+                    mt-2
+                    inline-flex
+                    min-h-[52px]
+                    w-full
+                    max-w-[220px]
+                    items-center
+                    justify-center
+                    gap-3
+                    rounded-full
+                    bg-[#333333]
+                    px-8
+                    py-3.5
+                    text-sm
+                    font-semibold
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:bg-[#F04424]
+                    disabled:cursor-not-allowed
+                    disabled:opacity-60
+                    sm:w-auto
+                    sm:max-w-none
+                    sm:px-10
+                  "
+                >
+                  {loading ? "Submitting..." : "Submit Enquiry"}
 
-                {loading
-                  ? "Submitting..."
-                  : "Submit Enquiry"}
-
-                {!loading && (
-                  <ArrowUpRight
-                    size={17}
-                    strokeWidth={1.8}
-                    className="
-                      transition-transform
-                      duration-300
-                      group-hover:-translate-y-0.5
-                      group-hover:translate-x-0.5
-                    "
-                  />
-                )}
-
-              </button>
+                  {!loading && (
+                    <ArrowUpRight
+                      size={17}
+                      strokeWidth={1.8}
+                      className="
+                        transition-transform
+                        duration-300
+                        group-hover:-translate-y-0.5
+                        group-hover:translate-x-0.5
+                      "
+                    />
+                  )}
+                </button>
 
             </form>
 

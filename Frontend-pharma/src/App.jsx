@@ -18,23 +18,27 @@ function App() {
       {/* ================= NAVBAR ================= */}
       <Navbar />
 
-      {/* ================= HERO ================= */}
-      <Hero />
+      <main className="flex flex-col gap-8">
 
-      {/* ================= ABOUT ================= */}
-      <AboutPreview />
+        {/* ================= HERO ================= */}
+        <Hero />
 
-      {/* ================= CORE VALUES ================= */}
-      <CoreValues />
+        {/* ================= ABOUT ================= */}
+        <AboutPreview />
 
-      {/* ================= PRODUCTS ================= */}
-      <ProductPreview />
+        {/* ================= CORE VALUES ================= */}
+        <CoreValues />
 
-      {/* ================= QUALITY ================= */}
-      <QualityCompliance />
+        {/* ================= PRODUCTS ================= */}
+        <ProductPreview />
 
-      {/* ================= CONTACT / ENQUIRY ================= */}
-      <ContactEnquiry />
+        {/* ================= QUALITY ================= */}
+        <QualityCompliance />
+
+        {/* ================= CONTACT / ENQUIRY ================= */}
+        <ContactEnquiry />
+
+      </main>
 
       {/* ================= FOOTER ================= */}
       <Footer />

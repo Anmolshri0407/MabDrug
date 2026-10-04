@@ -197,7 +197,35 @@ function Footer() {
                 </span>
 
               </div>
+              {/* Instagram */}
 
+              <div className="flex items-start gap-3">
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-0.5 h-[18px] w-[18px] shrink-0 text-orange-400"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                </svg>
+
+                <a
+                  href="https://www.instagram.com/mabdrug_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm leading-6 text-slate-300 transition hover:text-white"
+                >
+                  @mabdrug_
+                </a>
+
+              </div>
               {/* Location */}
 
               <div className="flex items-start gap-3">

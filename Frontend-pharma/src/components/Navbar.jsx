@@ -38,7 +38,7 @@ function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
+      <nav className="mx-auto flex h-15 max-w-3xl items-center justify-between px-6 sm:px-10 lg:max-w-7xl lg:px-12">
 
         {/* Logo */}
         <a
@@ -54,7 +54,7 @@ function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-10 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -91,21 +91,11 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden bg-white transition-all duration-300 lg:hidden ${
-          isMenuOpen ? "max-h-[600px] border-t border-slate-100" : "max-h-0"
+        className={`overflow-hidden text-center bg-white transition-all duration-400 lg:hidden ${
+          isMenuOpen ? "max-h-[600px] text-center border-t  border-slate-100" : "max-h-0"
         }`}
       >
-        <div className="space-y-1 px-6 py-5">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#F04424]"
-            >
-              {item.name}
-            </a>
-          ))}
+        <div className="w-full px-6 py-5"> <div className="ml-6 space-y-1"> {navItems.map((item) => ( <a key={item.name} href={item.href} onClick={closeMenu} className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#F04424]" > {item.name} </a> ))}
 
           <a
             href="#contact"
@@ -116,6 +106,7 @@ function Navbar() {
             <ArrowUpRight size={16} />
           </a>
         </div>
+      </div>
       </div>
     </header>
   );

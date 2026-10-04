@@ -1,3 +1,7 @@
+import tabletImage from "../assets/products/Tablets.jpeg";
+import capsuleImage from "../assets/products/Capsules.jpeg";
+import syrupImage from "../assets/products/Syrups.jpeg";
+import healthcareImage from "../assets/products/otherHealth.jpeg";
 
 import {
   Pill,
@@ -17,28 +21,28 @@ const products = [
     title: "Tablets",
     description:
       "High-quality tablet formulations developed with a focus on consistency, safety and reliable performance.",
-    icon: Pill,
+    image: tabletImage,
   },
   {
     id: 2,
     title: "Capsules",
     description:
       "Carefully developed capsule formulations designed to meet quality standards and patient needs.",
-    icon: Tablets,
+    image: capsuleImage,
   },
   {
     id: 3,
     title: "Syrups",
     description:
       "Reliable liquid formulations designed with quality, effectiveness and ease of use in mind.",
-    icon: Droplets,
+    image: syrupImage,
   },
   {
     id: 4,
     title: "Other Healthcare Products",
     description:
       "A growing range of healthcare solutions focused on quality, reliability and responsible innovation.",
-    icon: Stethoscope,
+    image: healthcareImage,
   },
 ];
 
@@ -95,7 +99,7 @@ function ProductPreview() {
 
           {products.map((product) => {
 
-            const Icon = product.icon;
+            // const Icon = product.icon;
 
             return (
 
@@ -125,7 +129,7 @@ function ProductPreview() {
                 {/* ICON */}
                 {/* ================================================== */}
 
-                <div
+                {/* <div
                   className="
                     flex
                     h-14
@@ -147,6 +151,14 @@ function ProductPreview() {
                     strokeWidth={1.7}
                   />
 
+                </div> */}
+
+                <div className="w-full h-52 overflow-hidden rounded-2xl">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
 
 

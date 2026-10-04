@@ -1,3 +1,11 @@
+import qualityImage from "../assets/values/Quality.jpeg";
+import integrityImage from "../assets/values/Integrity.jpeg";
+import innovationImage from "../assets/values/Innovation.jpeg";
+import patientImage from "../assets/values/patient.jpeg";
+
+
+
+
 import {
   ShieldCheck,
   Handshake,
@@ -7,25 +15,25 @@ import {
 
 const values = [
   {
-    icon: ShieldCheck,
+    image: qualityImage,
     title: "Quality First",
     description:
       "We are committed to maintaining high standards across our healthcare solutions.",
   },
   {
-    icon: Handshake,
+    image: integrityImage,
     title: "Integrity",
     description:
       "We build relationships through transparency, responsibility and ethical business practices.",
   },
   {
-    icon: Lightbulb,
+    image: innovationImage,
     title: "Innovation",
     description:
       "We continuously explore better ideas and approaches to support evolving healthcare needs.",
   },
   {
-    icon: HeartPulse,
+    image: patientImage,
     title: "Patient Focus",
     description:
       "We keep healthcare needs and patient well-being at the center of our approach.",
@@ -36,7 +44,7 @@ function CoreValues() {
   return (
     <section
       id="values"
-      className="w-full bg-white px-5 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28"
+      className="bg-white w-full flex justify-center text-center px-6 py-32 lg:px-8"
     >
       {/* Main Container */}
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center">
@@ -68,7 +76,7 @@ function CoreValues() {
         <div className="mt-12 grid w-full grid-cols-1 gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2">
 
           {values.map((value) => {
-            const Icon = value.icon;
+            
 
             return (
               <div
@@ -76,7 +84,7 @@ function CoreValues() {
                 className="
                   group
                   flex
-                  min-h-[300px]
+                  min-h-[420px]
                   w-full
                   flex-col
                   items-center
@@ -93,32 +101,17 @@ function CoreValues() {
                   hover:-translate-y-2
                   hover:border-orange-200
                   hover:shadow-xl
-                  sm:min-h-[270px]
+                  sm:min-h-[300px]
                   sm:px-10
                 "
               >
 
                 {/* Icon */}
-                <div
-                  className="
-                    flex
-                    h-16
-                    w-16
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    bg-orange-50
-                    text-[#F04424]
-                    transition-all
-                    duration-300
-                    group-hover:bg-[#F04424]
-                    group-hover:text-white
-                  "
-                >
-                  <Icon
-                    size={30}
-                    strokeWidth={1.7}
+                <div className="h-56 w-full overflow-hidden rounded-2xl">
+                  <img
+                    src={value.image}
+                    alt={value.title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
 
